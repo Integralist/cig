@@ -7,7 +7,6 @@ notifications:
       - stevenmajack@gmail.com
     on_failure: change
     on_success: never
-sudo: false
 install:
   - "go get github.com/mitchellh/gox"
   - "gox -build-toolchain"
