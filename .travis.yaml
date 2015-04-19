@@ -1,4 +1,6 @@
 language: go
+go:
+  - 1.3
 notifications:
   email:
     recipients:
@@ -6,7 +8,8 @@ notifications:
     on_failure: change
     on_success: never
 sudo: false
-script:
+install:
   - "go get github.com/mitchellh/gox"
   - "gox -build-toolchain"
+script:
   - "gox"
